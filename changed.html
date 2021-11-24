@@ -9,75 +9,84 @@
 </head>
 <body>
   <div class="bg">
-    
-    <header class="site-header">
-      <div class="img-wrap">
-        <img src="img/logo.svg" alt="DEVFLIX, 페이지 로고">
-      </div>
+
+  	<header class="header-section">
+      <div class="header-inner">
+        <h1 class="offscreen" style="opacity:0;">페이지 로고</h1>
+        <div class="img-box">
+          <img src="" alt="" />
+        </div>
+      <div>
     </header>
 
-    <main class="content">
-      <div class="login-form">
-        <div class="form">
-          <form action="">
-            <legend class="form-title">Sing In</legend>
-            <fieldset>
-              <div class="form-info form-email">
-                <label for="info-email">Email or Phone Number</label>
-                <div class="form-input">
-                  <input type="text" id="info-email">
-                </div>
-              </div>
-              <div class="form-info form-pwd">
-                <label for="info-pwd">Password</label>
-                <div class="form-input">
-                  <input type="password" id="info-pwd">
-                </div>
-                <button type="button" class="toggle-show">SHOW</button>
-              </div>
-            </fieldset>
-            <fieldset>
-              <div class="form-actions">
-                <div class="btn-wrap"><button type="button" class="btn-signIn">Sign in</button></div>
-                <div class="form-more">
-                  <div class="form-remeber-info">
-                    <input type="checkbox" id="info-memory">
-                    <label for="info-memory">Remember Me</label>             
+    <main class="main-section">
+  		<div class="main-inner">
+          <div class="form">
+            <form class="form-top">
+              <legend class="form-title">Sign In</legend>
+              <fieldset>
+                <div class="form-info form-email">
+                  <div class="form-input">
+                    <input type="text" id="info-email" />
+                    <label for="info-email">Email or Phone Number</label>
                   </div>
-                  <a href="javascript:void(0);" class="form-help">Need Help?</a>
                 </div>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-        <div class="form-bottom">
-          <p class="form-txt"><a href="javascript:void(0);">Login with Facebook</a></p>
-          <p class="form-txt bold">
-            <span>New to NETFLIX?</span>
-            <a href="javascript:void(0);" class="signup">Sign up now.</a>
-          </p>
-        </div>
+                <div class="form-info form-pwd">
+                  <div class="form-input">
+                    <input type="password" id="info-pwd" />
+                    <label for="info-email">Password</label>
+                  </div>
+                  <button type="button" class="toggle-show">SHOW</button>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-actions">
+                  <button type="button" class="btn-signIn">Sign in</button>
+                  <div class="form-more">
+                    <div class="form-info-save">
+                      <input type="checkbox" id="info-memory" />
+                      <label for="info-memory">Remember Me</label>
+                    </div>
+                    <a href="javascript:void(0;" class="form-help">Need Help?</a>
+                  </div>
+                </div>
+              </fieldset> 
+            </form>
+            <div class="form-bottom">
+              <ul class="login-info">
+                <li><a href="javascript:void(0);" class="form-txt">Login with Facebook</a></li>
+                <li>
+                  <span class="welcome">New to NetFlix?</span>
+                  <a href="javascript:void(0);" class="signup form-txt">Sign up now.</a>
+                </li>
+              </ul>
+            </div>
+          </div>
       </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="footer-content">
-        <p class="question">Questions? Call <a href="javascript:void(0);">01800-000-0000</a></p>
-        <ul class="company-info">
-          <li><a href="javascript:void(0);">Gift Card<br class="text-wrap"/> Terms</a></li>
-          <li><a href="javascript:void(0);">Terms of<br class="text-wrap"/> use</a></li>
-          <li><a href="javascript:void(0);">Privacy<br class="text-wrap"/> Statement</a></li>
-        </ul>
-        <div class="">
-          <select class="language">
-            <option value="english">English</option>
-            <option value="spanish">Spanish</option>
-          </select>
+      <footer class="footer-section">
+        <div class="footer-inner">
+          <p class="user-contact">Question? Call <a href="javascript:void(0);">018</a></p>
+          <ul class="user-agreement">
+            <li><a href="javascript:void(0);">Gift Card<br class="text-wrap" /> Terms</a></li>
+            <li><a href="javascript:void(0);">Terms of<br class="text-wrap" /> use</a></li>
+            <li><a href="javascript:void(0);">Privacy<br class="text-wrap" /> Statement</a></li>
+          </ul>
+          <div class="user-language">
+            <select>
+              <option value="english">English</option>
+              <select>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
 
-  </div>
+    </div>
+ 
+
+
+
+
   <script src="src/source.js"></script>
 </body>
 </html>

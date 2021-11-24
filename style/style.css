@@ -45,37 +45,37 @@ body {
   background-color: #000000;
 }
 
-.site-header .img-wrap {
+.header-section .img-box {
   max-width: 180px;
   margin-top: 0.5rem;
 }
 
-.login-form {
+.main-section {
   width: 90%;
   margin: 0 auto 20px auto;
 }
 
-.form .form-title {
+.form-top .form-title {
   color: #fff;
   font-size: 1.8rem;
   font-weight: bold;
   margin: 2rem 0;
 }
-.form .form-info {
+
+.form-top .form-info {
+  border: 1px solid red;
+  margin-bottom: 70px;
+}
+
+.form-top .form-info .form-input {
   position: relative;
-}
-
-.form .form-info:first-child {
-  margin-bottom: 0.8rem;
-}
-
-.form .form-info .form-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.form .form-info .form-input input {
+.form-top .form-info .form-input input {
+  display: block;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -86,7 +86,9 @@ body {
   font-size: 1.2rem;
 }
 
-.form .form-info label {
+.form-top .form-info label {
+  display: inline-block;
+  vertical-align: top;
   position: absolute;
   top: 50%;
   left: 20px;
@@ -96,7 +98,7 @@ body {
   transition: font-size 0.2s ease, top 0.2s ease;
 }
 
-.form .form-info .toggle-show {
+.form-top .form-info .toggle-show {
   display: inline-block;
   vertical-align: top;
   position: absolute;
@@ -107,25 +109,15 @@ body {
   padding: 10px 0;
   text-align: center;
   background: #323232;
-  /* background: #fff; */
   border: 0;
   border-radius: 5px;
   font-size: 0.7rem;
   cursor: pointer;
 }
 
-.form .form-actions .btn-wrap {
-  margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.form .form-actions .btn-wrap .btn-signIn {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+.form-top .form-actions .btn-signIn {
   display: block;
+  width: 100%;
   background: #e50914;
   color: #fff;
   border: 0;
@@ -135,7 +127,7 @@ body {
   transition: background-color 0.3s ease-in-out;
 }
 
-.form .form-actions .form-more {
+.form-top .form-actions .form-more {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,21 +135,21 @@ body {
   font-size: 0.8rem;
 }
 
-.form .form-actions .form-more .form-help {
+.form-top .form-actions .form-more .form-help {
   margin-left: auto;
 }
 
-.form .form-actions .form-remeber-info {
+.form-top .form-actions .form-info-save {
   position: relative;
 }
 
-.form .form-actions .form-remeber-info input {
+.form-top .form-actions .form-info-save input {
   position: absolute;
   top: 1px;
   width: auto;
 }
 
-.form .form-actions .form-remeber-info label {
+.form-top .form-actions .form-info-save label {
   display: inline-block;
   vertical-align: top;
   margin-left: 20px;
@@ -167,57 +159,45 @@ body {
   margin: 90px 0 30px 0;
 }
 
-.form-bottom .form-txt a,
-.form-bottom .form-txt span {
-  display: inline-block;
-  vertical-align: top;
+.form-bottom {
+  margin: 90px 0 30px 0;
 }
 
-.form-bottom .form-txt a {
-  font-size: 0.8rem;
-}
-
-.form-bottom .form-txt:first-child {
+.form-bottom .login-info li:first-child {
   margin-bottom: 1rem;
 }
 
-.form-bottom .form-txt.bold {
-  font-size: 0;
+.form-bottom .login-info .form-txt {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.8rem;
 }
 
-.form-bottom .form-txt.bold span {
-  font-size: 1rem;
-}
-
-.form-bottom .form-txt.bold .signup {
+.form-bottom .login-info .signup {
   color: #fff;
   margin-left: 0.5rem;
   font-size: 1rem;
 }
 
-.site-footer {
+.footer-section {
   width: 90%;
   border-top: 1px solid #8c8c8c;
   margin: 0 auto;
 }
 
-.footer-content {
+.footer-inner {
   padding: 20px 0 20px 0;
 }
-
-.question {
+.user-contact {
   margin-bottom: 40px;
 }
-
-.company-info {
+.user-agreement {
   margin-bottom: 40px;
 }
-
-.company-info li + li {
+.user-agreement li + li {
   margin: 10px 0 10px 0;
 }
-
-.company-info .text-wrap {
+.user-agreement .text-wrap {
   display: none;
   transition: all 0.2s;
 }
@@ -228,12 +208,12 @@ body {
     background-size: cover;
   }
 
-  .site-header .img-wrap {
+  .header-section .img-box {
     max-width: 180px;
     margin-left: 2rem;
   }
 
-  .login-form {
+  .main-inner {
     background: rgba(0, 0, 0, 0.75);
     max-width: 450px;
     margin: 3rem auto 4rem auto;
@@ -245,13 +225,13 @@ body {
     margin-top: 12rem;
   }
 
-  .site-footer {
+  .footer-section {
     border-top: 0;
     background-color: rgba(0, 0, 0, 0.75);
     padding: 1rem 0 3rem 0;
   }
 
-  .site-footer .footer-content .text-wrap {
+  .footer-section .footer-inner .text-wrap {
     display: block;
   }
 }
