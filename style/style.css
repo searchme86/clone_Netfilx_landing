@@ -63,8 +63,14 @@ body {
 }
 
 .form-top .form-info {
-  border: 1px solid red;
-  margin-bottom: 70px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-top .form-info.on label {
+  font-size: 0.6rem;
+  top: 0.5rem;
+  left: 1rem;
 }
 
 .form-top .form-info .form-input {

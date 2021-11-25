@@ -1,32 +1,77 @@
 (function () {
-     const labels = Array.from(document.querySelectorAll('.form-info label'))
-    
-     const validateform = (e)=>{
-          const states = ['valid', 'inValid']
-               
-          if (e.target.previousElementSibling.value.length === 0) {
-               classes= states[0]
-          }else{
-               classes = states[1]
-          }
+	const boxes = Array.from(document.querySelectorAll('.form-info'))
+	const inputs = Array.from(document.querySelectorAll('.form-input input'))
+	const labels = Array.from(document.querySelectorAll('.form-input label'))
 
-          e.target.parentNode.classList.remove(...states)
-          e.target.parentNode.classList.add(classes)
-          console.log(classes)
+	const states = ['valid', 'invalid'];
+	let classes = '';	
 
-          if(classes = 'inValid'){
-               if(e.target.parentNode.className!=='alert'){
-               const errorDiv = document.createElement('div');
-               errorDiv.appendChild(document.createTextNode('this is a mandatory'))
-               errorDiv.classList.add('alert');
-               e.target.parentNode.parentNode.insertAdjacentElement('beforeEnd', errorDiv)	
-               }
-          }
+	const validateform = (e) => {
+		
+		inputs.forEach((input)=> input.classList.remove())
+		labels.forEach((label)=> label.classList.remove())
+		boxes.forEach((box)=> box.classList.remove())
 
-     }
-	labels.forEach((label)=>{
-		label.addEventListener('click',validateform)
-		label.addEventListener('blur',validateform)
-     })
-     console.log(labels)
+		for(let i=0; i<labels.length; i++){
+			labels[i].addEventListener('click',function(e){
+				e.target.parentNode.parentNode.classList.add('on');
+				e.stopPropagation();
+			})
+		}
+
+		for(let i=0; i<inputs.length; i++){
+			inputs[i].addEventListener('focus',function(e){
+				if(e.target.parentNode.querySelector('label').style.opacity==0){
+					e.target.parentNode.parentNode.classList.add('on');
+					e.target.parentNode.querySelector('label').style.opacity=1;
+					e.stopPropagation();
+				}
+			})
+		}
+
+		for(let i=0; i<inputs.length; i++){
+			inputs[i].addEventListener('blur',function(e){
+				e.target.parentNode.parentNode.classList.remove('on');
+				e.stopPropagation();
+			})
+		}
+
+		for(let i=0; i<inputs.length; i++){
+			inputs[i].addEventListener('input',function(e){
+				if(!!e.target.value.length){
+					e.target.parentNode.parentNode.classList.add('on')
+				}else{
+					e.target.parentNode.parentNode.classList.remove('on')
+				}
+				e.stopPropagation();
+			})
+		}
+
+		for(let i=0; i<inputs.length; i++){
+			inputs[i].addEventListener('blur',function(e){
+				if(!!e.target.value.length){
+					e.target.previousElementSibling.style.opacity=0;
+					e.target.previousElementSibling.style.transition='all .5s';
+					e.stopPropagation();	
+				}
+			})
+		}
+
+		for(let i=0; i<inputs.length; i++){
+			inputs[i].addEventListener('click',function(e){
+				e.target.parentNode.parentNode.classList.add('on');
+				// let currentIdx = i;
+				// let newArray = [];
+				// let anotherItem;
+				// anotherItem = inputs.splice(currentIdx,1)
+				// newArray.push(anotherItem);
+				// console.log(inputs)
+				// console.log(currentIdx)
+				// console.log(newArray)
+				e.stopPropagation();
+			})
+		}
+	}
+
+	validateform();
 }())
