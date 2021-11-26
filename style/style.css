@@ -67,10 +67,21 @@ body {
   margin-bottom: 30px;
 }
 
+.form-top .form-info:first-child {
+  margin-bottom: 16px;
+}
+
 .form-top .form-info.on label {
   font-size: 0.6rem;
   top: 0.5rem;
   left: 1rem;
+}
+
+.form-top .form-info.inValid .alert {
+  font-size: 13px;
+  color: #e50914;
+  padding: 5px;
+  font-weight: bold;
 }
 
 .form-top .form-info .form-input {
@@ -159,10 +170,6 @@ body {
   display: inline-block;
   vertical-align: top;
   margin-left: 20px;
-}
-
-.form-bottom {
-  margin: 90px 0 30px 0;
 }
 
 .form-bottom {
